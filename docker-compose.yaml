@@ -53,7 +53,7 @@ services:
     image: 0jacky/$PROJ:latest
     container_name: doc
     volumes:
-        - $PWD/src:/home/$DOCKER_USER/$PROJ/src
+        - $PWD/bigkinds_loader:/home/$DOCKER_USER/$PROJ/bigkinds_loader
         - $PWD/docs:/home/$DOCKER_USER/$PROJ/docs
     command: bash -c "rm -f docs/bigkinds_loader* && sphinx-apidoc -o docs bigkinds_loader && cd docs && make clean html"
 
