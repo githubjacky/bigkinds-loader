@@ -1,5 +1,4 @@
 # bigkinds-loader
-*Downloading bigkinds news article.*
 
 
 ## Set up the environment, and Install dependencies
