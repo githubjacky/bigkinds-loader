@@ -10,7 +10,14 @@ from bigkinds_loader import Scraper
 @hydra.main(config_path="../config", config_name="main", version_base=None)
 def main(cfg: DictConfig):
     agent = Scraper()
-    agent.get_news_batch(cfg.press, cfg.timeout, cfg.begin, cfg.end)
+    agent.get_news_batch(
+        cfg.press,
+        cfg.timeout,
+        cfg.begin,
+        cfg.end,
+        cfg.db_name,
+        cfg.collection_name
+    )
 
 
 if __name__ == "__main__":

@@ -16,3 +16,5 @@ press: 한국경제
 timeout: 300000
 begin: 2024-01-01
 end: 2024-01-01
+db_name: 한국경제
+collection_name: 2024-01-01

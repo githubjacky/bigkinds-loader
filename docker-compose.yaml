@@ -26,6 +26,7 @@ services:
       - mongodb
     environment:
       - CONN_STR=mongodb://$MONGODB_USER:$MONGODB_PASS@mongodb
+      - CONN_STR=$CONN_STR
       - PLAYWRIGHT_BROWSERS_PATH=/home/$DOCKER_USER/.cache/ms-playwright
     volumes:
       - $PWD/config:/home/$DOCKER_USER/$PROJ/config
