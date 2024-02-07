@@ -129,6 +129,7 @@ class Scraper:
                 item['date'] = detail['DATE']
                 item['title'] = detail['TITLE']
                 item['content'] = detail['CONTENT']
+                logger.info('query success')
             else:
                 logger.info('fail to query news')
         else:
@@ -165,8 +166,8 @@ class Scraper:
 
         log_dir = Path(f'log/{press}/{begin.split("-")[0]}')
         log_dir.mkdir(parents=True, exist_ok=True)
-        logger.add(log_dir / f'{begin}_{end}.log')
         logger.remove()
+        logger.add(log_dir / f'{begin}_{end}.log', level='INFO')
 
         client = MongoClient(os.environ['CONN_STR'])
         db = client[press if db_name is None else db_name]

@@ -17,7 +17,7 @@ build:
 
 
 up:
-	docker compose up bigkinds-loader
+	docker compose run --rm bigkinds-loader
 
 
 down:
@@ -37,4 +37,4 @@ doc:
 
 
 jupyter:
-	docker compose up jupyter-lab
+	docker compose run --rm --service-ports jupyter-lab
