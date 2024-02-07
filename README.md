@@ -33,6 +33,7 @@ make jupyter
 3. modify the configuration file - `config/main.yaml`
 4. run the program
 ```sh
+# Note: the log file will be stored under `log/{press}/{begin}_{end}`
 make up
 ```
 5. stop the container
