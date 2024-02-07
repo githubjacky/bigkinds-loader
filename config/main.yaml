@@ -1,13 +1,18 @@
 hydra:
-  output_subdir: null  
+  output_subdir: null
   run:
     dir: .
 
+
 defaults:
-  # - process: process1
-  # - model: model1
   - _self_
 
-data_dir:
-  raw: data/raw
-  processed: data/processed
+
+# 경향신문
+# 한겨레
+# 한국일보
+# 매일경제
+press: 한국경제
+timeout: 300000
+begin: 2024-01-01
+end: 2024-01-01

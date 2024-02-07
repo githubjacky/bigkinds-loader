@@ -1,1 +1,1 @@
-"""Source code of your project"""
+from .core import Scraper

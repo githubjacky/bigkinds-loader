@@ -1,4 +1,4 @@
-.PHONY: first_build build clean pytest pydoc jupyter mlflow
+.PHONY: first_build build up down clean pytest doc jupyter
 
 
 first_build:
@@ -16,6 +16,14 @@ build:
 	docker compose build
 
 
+up:
+	docker compose up bigkinds-loader
+
+
+down:
+	docker compose down
+
+
 clean:
 	docker rmi --force 0jacky/bigkinds-loader:latest
 
@@ -29,4 +37,4 @@ doc:
 
 
 jupyter:
-	docker compose run --rm --service-ports jupyter-lab
+	docker compose up jupyter-lab
